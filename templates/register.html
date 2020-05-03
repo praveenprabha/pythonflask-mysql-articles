@@ -1,0 +1,53 @@
+{% extends 'layout.html' %}
+
+
+{% block body %}
+
+<!-- <section id="register">
+  <div class="container"> -->
+      <h1>Register</h1>
+      {% from "includes/formhelper.html" import render_field %}
+      <form method="POST" class="needs-validation">
+        <div class="form-group">
+          {{ render_field(form_data.name, class="form-control")}}
+        </div>
+        <div class="form-group">
+          {{ render_field(form_data.email, class_="form-control")}}
+        </div>
+        <div class="form-group">
+          {{ render_field(form_data.username, class_="form-control")}}
+        </div>
+        <div class="form-group">
+          {{ render_field(form_data.password, class_="form-control")}}
+        </div>
+        <div class="form-group">
+          {{ render_field(form_data.confirm_password, class_="form-control")}}
+        </div>
+        <p><input type="submit" class="btn btn-dark"  value="Submit"></p>
+      </form>
+      <!-- </div>
+</section> -->
+
+
+
+  <!-- <div class="form-group has-success">
+    <label class="form-control-label" for="inputSuccess1">Input with success</label>
+    <input type="text" class="form-control form-control-success" id="inputSuccess1">
+    <div class="form-control-feedback">Success! You've done it.</div>
+    <small class="form-text text-muted">Example help text that remains unchanged.</small>
+  </div>
+  <div class="form-group has-warning">
+    <label class="form-control-label" for="inputWarning1">Input with warning</label>
+    <input type="text" class="form-control form-control-warning" id="inputWarning1">
+    <div class="form-control-feedback">Shucks, check the formatting of that and try again.</div>
+    <small class="form-text text-muted">Example help text that remains unchanged.</small>
+  </div>
+  <div class="form-group has-danger">
+    <label class="form-control-label" for="inputDanger1">Input with danger</label>
+    <input type="text" class="form-control form-control-danger" id="inputDanger1">
+    <div class="form-control-feedback">Sorry, that username's taken. Try another?</div>
+    <small class="form-text text-muted">Example help text that remains unchanged.</small>
+  </div> -->
+{% endblock %}
+
+

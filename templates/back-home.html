@@ -1,0 +1,46 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+<section id="home">
+  <div class="center-container">
+    <div class="text-center">
+      <h1 style="font-family: 'Satisfy', cursive;">Welcome to PythonFlask</h1>
+      <p class="load">This application is build on Python Flask framework</p>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="center-container">
+      <div class="container">
+      <div class="section-title">
+        <span>About Me</span>
+        <h2>About Me</h2>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt quisquam, dignissimos aut odit quod inventore alias reiciendis quasi error voluptas ipsa sit, repellendus vel officiis beatae aliquam autem nesciunt mollitia.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section id="articles">
+  <div class="container">
+    <div class="section-title">
+      <span>Articles</span>
+      <h2>Articles</h2>
+    </div>
+
+    <ul class="list-group">
+      {% for article in data %}
+        <li class="list-group-item list-group-item-dark">
+          <a href="/article/{{article.id}}">{{article.title}}</a>
+          <h1>Hello</h1>
+        </li>
+      {% endfor%}
+    </ul>
+  </div>
+</section>
+
+
+{% endblock %}

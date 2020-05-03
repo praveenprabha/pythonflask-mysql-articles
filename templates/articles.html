@@ -1,0 +1,44 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+
+<!-- <h1>Articles</h1>
+  <ul class="list-group">
+      {% for article in data %}
+        <li class="list-group-item list-group-item-dark">
+          <a href="/article/{{article.id}}">{{article.title}}</a>
+        </li>
+      {% endfor%}
+  </ul> -->
+
+  <!-- <section id="articles">
+    <div class="container"> -->
+      <div class="section-title">
+        <span>Articles</span>
+        <h2>Articles</h2>
+      </div>
+  
+      <ul class="list-group list-group-flush">
+        {% for article in article_data %}
+          <!-- <li class="list-group-item list-group-item-action"> -->
+            <!-- <a class="list-group-item list-group-item-action" href="/article/{{article.id}}">{{article.title}}</a> -->
+          <!-- </li> -->
+
+          <a href="/article/{{article.id}}" 
+            class="list-group-item list-group-item-action flex-column align-items-start">
+            <div class="d-flex w-100 justify-content-between">
+              <h5 class="mb-1">{{ article.title}}</h5>
+              <small>{{ article.create_date}}</small>
+            </div>
+            <p class="mb-1">{{article.body | safe}}</p>
+          </a>
+
+        {% endfor%}
+      </ul>
+    <!-- </div>
+  </section> -->
+
+
+
+{% endblock %}

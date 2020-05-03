@@ -1,0 +1,269 @@
+*, ::after, ::before {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto Slab', serif;
+  /* font-family: 'Raleway', sans-serif; */
+  /* background-color: #484d5c; */
+  background-color: #fff;
+  /* color: #c0ccd4; */
+  color: #000000;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  /* font-family: 'Montserrat', sans-serif; */
+  font-family: 'Dauphin', arial;
+  color: #ffce00;
+ }
+
+section {
+  padding: 60px 0;
+}
+
+#home {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+#about {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+#articles {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+#register {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+
+.center-container {
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0 15px;
+}
+
+.home-heading h1 {
+  font-family: 'Satisfy', cursive;
+  font-size: 3rem;
+}
+
+
+
+
+.section-title {
+  text-align: center;
+  padding: 30px 0;
+  position: relative;
+  /* font-family: 'Montserrat', sans-serif; */
+  font-family: 'Dauphin', arial;
+  letter-spacing: 4px;
+  /* letter-spacing: 2px; */
+  
+}
+
+
+
+.section-title span {
+  position: absolute;
+  top: 30px;
+  color: #eef0f2;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  font-weight: 700;
+  font-size: 52px;
+  /* text-transform: uppercase; */
+  line-height: 0;
+}
+
+.section-title h2 {
+  font-size: 35px;
+  font-weight: 700;
+  /* text-transform: uppercase; */
+  margin-bottom: 20px;
+  padding-bottom: 0;
+  /* color: #3b434a; */
+  font-family: inherit;
+  position: relative;
+  z-index: 2;
+}
+
+.row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.col-lg-6 {
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.resume, .resume-title {
+  font-size: 26px;
+  font-weight: 700;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: #3b434a;
+}
+
+
+.resume, .resume-item {
+  padding: 0 0 20px 20px;
+  margin: -2px;
+  border-left: 2px solid #89909c;
+  position: relative;
+}
+
+.resume-item::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50px;
+  left: -9px;
+  top: 0;
+  background: #fff;
+  border: 2px solid #82909c;
+}
+
+
+
+
+.pb-0 {
+  padding-bottom: 0!important;
+}
+
+
+.bg-dark{
+  background-color: #22262a;
+}
+
+ 
+.navbar {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  opacity: 0.9;
+}
+
+
+.navbar-dark .navbar-brand {
+  font-family: 'Rock Salt';font-size: 30px;
+  /* font-family: 'Yellowjacket Shadow', arial;  font-size: 20px; */
+  /* font-family: 'Arizonia', cursive;
+  font-size: 48px; */
+  /* text-shadow: 4px 4px 4px #aaa; */
+
+  letter-spacing: 2px;
+  clear: both;
+  color: #ffce00;
+  /* color: #997a00;
+  border: 1px solid #ffce00; */
+}
+
+.navbar-dark .navbar-brand:focus{
+  color: #ffce00;
+}
+
+.navbar-dark .navbar-brand:hover {
+  color: #fff;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  font-weight: bold;
+  color: #d9d9d9;
+}
+
+.navbar-dark .navbar-nav .nav-link:active,
+.navbar-dark .navbar-nav .nav-link:focus, 
+.navbar-dark .navbar-nav .nav-link:hover {
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.dropdown {
+  position: initial;
+}
+
+.dropdown-menu {
+  position: relative;
+  font-size: 14px;
+  border: 0;
+  border-radius: 0;
+  padding: 0;
+  margin: 0;
+  background-color: #343a40;
+  
+}
+
+.dropdown-item {
+  /* background-color: #343a40; */
+  font-weight: bold;
+  color: #d9d9d9;
+  opacity: 0.9;
+}
+
+.dropdown-item:focus,
+.dropdown-item:hover {
+  font-weight: bold;
+	color: #ffffff;
+	text-decoration: none;
+	background-color: #343a40;
+}
+
+
+.container {
+  margin-top:80px;
+  margin-bottom: 80px;
+}
+
+
+
+.homepage {
+  text-align: center;
+  /* padding: 20% 0%; */
+  /* background: green; */
+}
+.aboutpage {
+  text-align: center;
+  /* padding: 20% 0%; */
+  /* background: red; */
+}
+.tourpage {
+  text-align: center;
+  /* padding: 20% 0%; */
+  /* background: yellow; */
+
+}
+.contactpage {
+  text-align: center;
+  /* padding: 20% 0%; */
+  /* background: blue; */
+  /* padding-top:80px;
+  padding-bottom: 80px; */
+  /* position: absolute;
+  width: 100%;
+  height: 100%; */
+}

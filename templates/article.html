@@ -1,0 +1,25 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+<!-- <section id="articles">
+  <div class="container"> -->
+  <!-- <h1>{{id_data}}</h1> -->
+  <!-- </div>
+  </section> -->
+
+  <div class="section-title">
+    <span>Article</span> 
+    <h2>Article</h2>
+  </div>
+  
+  <h2> {{ article.title }} </h2>
+    <small>Written By : {{ article.author}} on {{ article.creation_date}} </small> 
+  <hr>
+  <div>
+    {{article.body | safe }}
+  </div>
+
+
+
+{% endblock %}
