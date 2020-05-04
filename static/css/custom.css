@@ -5,11 +5,13 @@
 body {
   font-family: 'Roboto Slab', serif;
   /* font-family: 'Raleway', sans-serif; */
-  /* background-color: #484d5c; */
-  background-color: #fff;
-  /* color: #c0ccd4; */
-  color: #000000;
+  background-color: #484d5c;
+  /* background-color: #fff; */
+  color: #c0ccd4;
+  /* color: #000000; */
 }
+
+
 
 h1, h2, h3, h4, h5, h6 {
   /* font-family: 'Montserrat', sans-serif; */
@@ -27,11 +29,11 @@ section {
   position: relative;
 }
 
-#about {
+/* #about {
   width: 100%;
   height: 100vh;
   position: relative;
-}
+} */
 
 #articles {
   width: 100%;
@@ -83,7 +85,9 @@ section {
 .section-title span {
   position: absolute;
   top: 30px;
-  color: #eef0f2;
+  /* color: #eef0f2; */
+  color: #536a79;
+  opacity: 0.5;
   left: 0;
   right: 0;
   z-index: 1;
@@ -121,7 +125,12 @@ section {
   padding-left: 15px;
 }
 
-.resume, .resume-title {
+/* #about {
+  color: #3b434a;
+  /* font: inherit; */
+} */
+
+.about, .about-heading {
   font-size: 26px;
   font-weight: 700;
   margin-top: 20px;
@@ -130,14 +139,24 @@ section {
 }
 
 
-.resume, .resume-item {
-  padding: 0 0 20px 20px;
+.about, .about-item {
+  padding: 0 0 0 20px;
   margin: -2px;
   border-left: 2px solid #89909c;
   position: relative;
 }
 
-.resume-item::before {
+ /* .about-item h1, 
+ .about-item h2,
+ .about-item h3,
+ .about-item h4,
+ .about-item h5,
+ .about-item h6 {
+  color: #3b434a;
+  font-weight: bold;
+} */
+
+.about-item::before {
   content: "";
   position: absolute;
   width: 16px;
@@ -162,6 +181,21 @@ section {
 }
 
  
+.list-group-item {
+  background-color: #484d5c;
+}
+
+.list-group-item-action {
+  color: #c0ccd4;
+}
+
+.list-group-item:focus,
+.list-group-item:hover{
+  background-color: #656c81;
+  color: #ffffff;
+}
+
+
 .navbar {
   font-family: 'Montserrat', sans-serif;
   font-size: 16px;
