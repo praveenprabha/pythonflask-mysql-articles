@@ -1,5 +1,4 @@
 from flask import Flask, render_template, flash, redirect, url_for, request, redirect, session
-from data import Articles
 from flask_mysqldb import MySQL
 from flask_wtf import FlaskForm
 from wtforms import Form, StringField, TextAreaField, PasswordField, validators
@@ -8,7 +7,8 @@ from functools import wraps
 
 app = Flask(__name__)
 
-Articles = Articles()
+
+
 
 # MySQL configuration #
 app.config['MYSQL_HOST'] = 'localhost'
@@ -60,14 +60,12 @@ def article(id):
   return render_template('article.html', article=articleData)
 
 
-
 @app.route('/database')
 def database():
   # Defining Cursor to open a connection
   cur = mysql.connection.cursor()
   
   # Executing Query
-  # cur.execute('SELECT * FROM users')
   cur.execute( 'INSERT INTO users (name,email,username,password) VALUES(%s,%s,%s,%s)', ('Test3','test3@gmail.com','test_user_3','test_3@123') )
 
   # Commit Changes
@@ -77,12 +75,8 @@ def database():
   cur.close()
 
 
-  # returnValue = cur.fetchall()
-  # return str(returnValue)
   flash('You were successfully logged in','success')
-  # return "Success"
   return redirect(url_for('home'))
-
 
 
 class RegistrationForm(Form):
@@ -90,11 +84,10 @@ class RegistrationForm(Form):
   username          = StringField('User Name', [validators.length( min=4 ,max=25 )] )
   email             = StringField('Email', [validators.length( min=5 ,max=50 )] )
   password          = PasswordField ('Password', [
-                                # validators.DataRequired(),
+                                validators.DataRequired(),
                                 validators.EqualTo('confirm_password', message='Passwords does not match')
                               ])
   confirm_password  = PasswordField('Confirm Password')
-
 
 
 @app.route('/register', methods=['GET','POST'])
@@ -173,13 +166,12 @@ def is_loggedin(f):
     return decorated_function
 
 
-
-
 @app.route('/logout')
 def logout():
   session.clear()
   flash('Successfully logged out','success')
   return redirect(url_for('home'))
+
 
 @app.route('/dashboard')
 @is_loggedin
@@ -202,15 +194,16 @@ def dashboard():
 
   return render_template('dashboard.html')
 
+
 # Article Form Class
 class ArticleForm(Form):
   title   = StringField('Title', [validators.length( min=1 ,max=200 )] )
   body    = TextAreaField('Body', [validators.length( min=30 )] )
 
-
+# Add Article
 @app.route('/add_article', methods = ['GET','POST'])
 @is_loggedin
-def addarticle():
+def add_article():
   form = ArticleForm(request.form)
   if request.method == 'POST' and form.validate():
     title = form.title.data
@@ -231,6 +224,59 @@ def addarticle():
     return redirect(url_for('dashboard'))
 
   return render_template('add_article.html',article_data=form)
+
+# Edit Article
+@app.route('/edit_article/<string:id>',methods=['POST','GET'])
+@is_loggedin
+def edit_article(id):
+
+  # Get Form
+  form = ArticleForm(request.form)
+
+  # Creating Cursor
+  cur = mysql.connection.cursor()
+
+  # Query database based on id
+  cur.execute('SELECT * FROM articles WHERE ID = %s',(id))
+
+  articleData = cur.fetchone()
+
+  form.title.data = articleData['title']
+  form.body.data = articleData['body']
+
+  # Update the entry
+  if request.method == 'POST':
+    title = request.form['title']
+    body = request.form['body']
+    cur = mysql.connection.cursor()
+    cur.execute('UPDATE articles SET title = %s, body = %s WHERE id = %s',(title,body,id))
+
+    # Commit the changes
+    mysql.connection.commit()
+
+    # Close the database
+    cur.close()
+
+    flash('Article Updated','success')
+    return redirect(url_for('dashboard'))
+
+  return render_template('edit_article.html', article_data = form)
+
+@app.route('/delete_article/<string:id>',methods=['POST'])
+@is_loggedin
+def delete_article(id):
+
+  cur = mysql.connection.cursor()
+  cur.execute('DELETE FROM articles WHERE id = %s',(id))
+  mysql.connection.commit()
+  cur.close()
+
+  flash('Article Deleted','success')
+  return redirect(url_for('dashboard'))
+
+  pass
+
+
 
 
 

@@ -14,39 +14,16 @@ body {
 
 
 h1, h2, h3, h4, h5, h6 {
-  /* font-family: 'Montserrat', sans-serif; */
-  font-family: 'Dauphin', arial;
-  color: #ffce00;
+  /* font-family: 'Alegreya', serif; */
+  font-family: 'Roboto Slab', serif;
+  /* color: #ffce00; */
+  /* color: #18d26e; */
+  color: #00FF41;
  }
 
 section {
   padding: 60px 0;
 }
-
-#home {
-  width: 100%;
-  height: 100vh;
-  position: relative;
-}
-
-/* #about {
-  width: 100%;
-  height: 100vh;
-  position: relative;
-} */
-
-#articles {
-  width: 100%;
-  height: 100vh;
-  position: relative;
-}
-
-#register {
-  width: 100%;
-  height: 100vh;
-  position: relative;
-}
-
 
 .center-container {
   position: absolute;
@@ -67,25 +44,17 @@ section {
 }
 
 
-
-
 .section-title {
   text-align: center;
   padding: 30px 0;
   position: relative;
-  /* font-family: 'Montserrat', sans-serif; */
   font-family: 'Dauphin', arial;
-  letter-spacing: 4px;
-  /* letter-spacing: 2px; */
-  
+  letter-spacing: 4px;  
 }
-
-
 
 .section-title span {
   position: absolute;
   top: 30px;
-  /* color: #eef0f2; */
   color: #536a79;
   opacity: 0.5;
   left: 0;
@@ -93,7 +62,6 @@ section {
   z-index: 1;
   font-weight: 700;
   font-size: 52px;
-  /* text-transform: uppercase; */
   line-height: 0;
 }
 
@@ -118,43 +86,24 @@ section {
   margin-left: -15px;
 }
 
-.col-lg-6 {
-  position: relative;
-  width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
-}
 
-/* #about {
-  color: #3b434a;
-  font: inherit;
-} */
-
-.about, .about-heading {
+.about-heading {
   font-size: 26px;
   font-weight: 700;
   margin-top: 20px;
   margin-bottom: 20px;
-  color: #3b434a;
+  /* color: #3b434a; */
+  /* color: inherit; */
+  letter-spacing: 2px;
 }
 
 
-.about, .about-item {
+.about-item {
   padding: 0 0 0 20px;
   margin: -2px;
   border-left: 2px solid #89909c;
   position: relative;
 }
-
- /* .about-item h1, 
- .about-item h2,
- .about-item h3,
- .about-item h4,
- .about-item h5,
- .about-item h6 {
-  color: #3b434a;
-  font-weight: bold;
-} */
 
 .about-item::before {
   content: "";
@@ -169,18 +118,15 @@ section {
 }
 
 
-
-
 .pb-0 {
   padding-bottom: 0!important;
 }
-
 
 .bg-dark{
   background-color: #22262a;
 }
 
- 
+
 .list-group-item {
   background-color: #484d5c;
 }
@@ -205,16 +151,9 @@ section {
 
 .navbar-dark .navbar-brand {
   font-family: 'Rock Salt';font-size: 30px;
-  /* font-family: 'Yellowjacket Shadow', arial;  font-size: 20px; */
-  /* font-family: 'Arizonia', cursive;
-  font-size: 48px; */
-  /* text-shadow: 4px 4px 4px #aaa; */
-
   letter-spacing: 2px;
   clear: both;
-  color: #ffce00;
-  /* color: #997a00;
-  border: 1px solid #ffce00; */
+  color: #00FF41;
 }
 
 .navbar-dark .navbar-brand:focus{
@@ -253,7 +192,6 @@ section {
 }
 
 .dropdown-item {
-  /* background-color: #343a40; */
   font-weight: bold;
   color: #d9d9d9;
   opacity: 0.9;
@@ -274,30 +212,43 @@ section {
 }
 
 
+.back-to-top {
+  position: fixed;
+  display: none;
+  right: 10px;
+  bottom: 10px;
+  z-index: 99999;
+}
 
-.homepage {
-  text-align: center;
-  /* padding: 20% 0%; */
-  /* background: green; */
+.back-to-top a {
+  color: #18d26e;
+  text-decoration: none;
+  background-color: transparent;
 }
-.aboutpage {
-  text-align: center;
-  /* padding: 20% 0%; */
-  /* background: red; */
+
+
+.back-to-top i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  background: #00FF41;
+  color: #fff;
+  transition: all 0.4s;
 }
-.tourpage {
-  text-align: center;
-  /* padding: 20% 0%; */
-  /* background: yellow; */
+
+.footer_arrow {
 
 }
-.contactpage {
-  text-align: center;
-  /* padding: 20% 0%; */
-  /* background: blue; */
-  /* padding-top:80px;
-  padding-bottom: 80px; */
-  /* position: absolute;
-  width: 100%;
-  height: 100%; */
+
+.footer_arrow i {
+  font-size: 24px; 
+  width: 40px; 
+  height: 40px;
+  border-radius: 4px;
+  background: #00FF41;
+
 }

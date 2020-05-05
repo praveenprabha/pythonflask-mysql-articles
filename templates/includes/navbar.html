@@ -15,7 +15,6 @@
           {% if session.logged_in %}
             <li class="nav-item "><a class="nav-link " href="/dashboard">Dashboard</a></li>
           {% endif %}
-          <!-- <li class="nav-item"><a class="nav-link" href="/register">Register</a></li> -->
           <!-- <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="navbardrop">
                 <span class="caret"></span>
@@ -28,14 +27,24 @@
         </ul>
         <ul class="nav navbar-nav ml-auto">
             {% if session.logged_in %}
-              <!-- <li class="nav-item "><a class="nav-link " href="/dashboard">Dashboard</a></li> -->
-              <li class="nav-item "><a class="nav-link " href="/logout">Logout <i class="fa fa-sign-out fa-fw "></i></a></li>
+              <li class="nav-item ">
+                  <a class="nav-link " href="/logout">Logout 
+                      <i class="fa fa-sign-out fa-fw "></i>
+                  </a>
+              </li>
               
             {% else %}
-              <li class="nav-item "><a class="nav-link " href="/register"><i class="fa fa-user fa-fw "></i> Register</a></li>
-              <li class="nav-item"><a class="nav-link" href="/login"><i class="fa fa-sign-in fa-fw"></i> Login</a>
+              <li class="nav-item ">
+                  <a class="nav-link " href="/register">
+                      <i class="fa fa-user fa-fw "></i> Register
+                  </a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="/login">
+                      <i class="fa fa-sign-in fa-fw"></i> Login
+                  </a>
+              </li>
             {% endif %}
-          </li>
         </ul>
       </div>
   </div>

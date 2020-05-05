@@ -5,23 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PythonFlask - Article</title>
 
+  <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon"> 
+
+  <!-- Fonts -->
   <link href='https://fonts.googleapis.com/css?family=Rock Salt' rel='stylesheet'>
-  <!-- <link href="https://fonts.googleapis.com/css?family=Cardo:400,700|Oswald" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Lora:400,700|Montserrat:300" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Chivo:300,700|Playfair+Display:700i" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Quicksand:300,500" rel="stylesheet"> -->
-  <link href="https://fonts.googleapis.com/css?family=Quicksand:300,500|Montserrat:300" rel="stylesheet">
-  <!-- <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Montserrat+Alternates:wght@700&display=swap" rel="stylesheet"> -->
-  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Josefin+Slab:ital,wght@1,600&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto+Slab&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
   <link href="http://allfont.net/allfont.css?fonts=dauphin" rel="stylesheet" type="text/css" />
-  <link href="http://allfont.net/allfont.css?fonts=yellowjacket-shadow" rel="stylesheet" type="text/css" />
-  <!-- <link href="http://allfont.net/allfont.css?fonts=arizonia" rel="stylesheet" type="text/css" /> -->
-
-  <link href="https://fonts.googleapis.com/css2?family=Arizonia&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@700&display=swap" rel="stylesheet">
 
 
   <!-- <link 	rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"> -->
@@ -31,10 +22,13 @@
   <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script> -->
   <script src="../static/js/bootstrap.min.js"></script>
 
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+  <!-- Customized JS and CSS -->
   <link rel="stylesheet" href="../static/css/custom.css">
   <script src="../static/js/custom.js"></script>
+
 
   <!-- <script src="//cdn.ckeditor.com/4.14.0/standard/ckeditor.js"></script> -->
   <script src="//cdn.ckeditor.com/4.14.0/basic/ckeditor.js"></script>
@@ -52,7 +46,8 @@
     {% block body %}{% endblock %}
   </div>
   <script>
-    CKEDITOR.replace( 'editor' );
+    CKEDITOR.replaceAll( 'editor' );
+    CKEDITOR.remove('editor');
   </script>
   {% include 'includes/footer.html' %}
 
