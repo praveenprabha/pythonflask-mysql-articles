@@ -19,6 +19,9 @@
     {{ render_field(article_data.body, class_="form-control", id = "editor")}}
   </div>
   <p><input type="submit" class="btn btn-dark"  value="Submit"></p>
+  <script>
+    CKEDITOR.replace( 'editor' );
+  </script>
 </form>
 
 {% endblock %}
